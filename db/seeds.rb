@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#rails g resource 
+#rails g scaffold Proposal customer:string portfolio_url:string tools:string estimated_hours:float hourly_rate:integer weeks_to_complete:string client_email:string
+
+10.times do |proposal|
+	Proposal.create!(
+		customer: "Customer #{proposal}",
+		portfolio_url: 'http://portfolio.jordanhudgens.com',
+		tools: 'Ruby on Rails, Angular 2, and Postgres',
+		estimated_hours: (80 + proposal),
+		hourly_rate: 120,
+		weeks_to_complete: 12,
+		client_email: 'jordan@devcamp.com',
+	)
+end
